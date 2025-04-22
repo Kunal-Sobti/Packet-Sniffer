@@ -138,7 +138,3 @@ Send packet data to a remote server or cloud database for centralized monitoring
 3.Troubleshooting tool in small networks or embedded devices.
 4.Baseline for custom tools, like honeypots, firewalls, or traffic classifiers.
 5.Network diagnostics utility in constrained environments where tools like Wireshark are too heavy.
-
-
-
-
