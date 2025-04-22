@@ -1,13 +1,13 @@
-SniffPy-A Network Traffic Monitoring and Analysis Tool  
+#SniffPy-A Network Traffic Monitoring and Analysis Tool  
 
-**Overview :**
+##Overview:
 In today’s digital landscape, network traffic monitoring plays a critical role in 
 maintaining security, diagnosing network issues, and ensuring optimal data flow. With 
 the rise in cyberattacks, malicious traffic, and data breaches, it has become essential to 
 analyze packets transmitted over a network to understand behaviors, detect threats, and 
 take preventive actions. 
 
-**Abstract:**
+##Abstract:
 This project focuses on the development of a network packet sniffer using Python raw 
 sockets, without relying on external libraries such as Scapy. The tool is designed to intercept, 
 decode, and display network packets in real time, offering a deeper understanding of network 
@@ -26,7 +26,7 @@ as intrusion detection systems, traffic analyzers, and protocol testing tools. I
 demonstrates the capability of Python for performing real-time network monitoring tasks 
 efficiently and with precise control over packet structure.
 
-**Problem Formulation:**
+##Problem Formulation:
 While packet sniffing tools like Wireshark are widely used, they often function as black 
 boxes and obscure the internal mechanics of how packet capture works. There is a lack 
 of lightweight tools that: 
@@ -38,7 +38,7 @@ decodes raw Ethernet frames and network layer protocols using only the built-in 
 and struct modules in Python. It is a manual and transparent approach, providing fine
 grained control and insights into packet data. 
 
- **What is Network Packet Sniffing? **
+ ##What is Network Packet Sniffing?
 Network packet sniffing refers to the process of intercepting and analyzing network 
 traffic. Each packet transferred over a network contains headers and data payloads 
 related to communication protocols. Sniffing tools examine these packets for various 
@@ -49,14 +49,14 @@ much of the underlying operations. For a foundational understanding, it is cruci
 explore how these packets can be captured and interpreted manually at the byte level.
 ![image](https://github.com/user-attachments/assets/ba229e1c-06ba-4a01-b7d1-e2a6cdd152d2)
 
-**Use Cases:**
+##Use Cases:
 1.Performance Analysis
 2.Network Troubleshooting
 3.Security Research
 4.Traffic Monitoring
 5.Intrusion Detection
 
-**METHODOLOGY :**
+##METHODOLOGY :
 1. Packet Capture- 
 A raw socket is initialized using: 
 This listens on all interfaces and captures every packet  
@@ -98,12 +98,12 @@ formatted using textwrap and a custom utility function to make hex data readable
 This hierarchical and readable output helps in understanding the structure of each 
 packet and is useful for debugging or training purposes.
 
-**OUTPUT WINDOW:**
+##OUTPUT WINDOW:
 ![image](https://github.com/user-attachments/assets/ae14022a-fed5-4e5f-95ab-caf8b7e42624)
 ![image](https://github.com/user-attachments/assets/98ec2111-dcf7-488f-891e-dde098703817)
 ![image](https://github.com/user-attachments/assets/458003f3-e28d-4321-aa95-4e22ee43ea65)
 
-**Future Extensions:-**
+##Future Extensions:-
 The current implementation is robust for learning and analysis, but it can be extended into a more powerful tool through:
 1. Data Storage and Reporting
 Export logs to CSV, PCAP, or JSON formats.
@@ -132,7 +132,7 @@ Abstract platform-dependent features to make it work on Windows and macOS, possi
 7. Cloud and Remote Logging
 Send packet data to a remote server or cloud database for centralized monitoring.
 
-**Potential Applications:-**
+##Potential Applications:-
 1.Cybersecurity training labs for demonstrating packet analysis and header inspection.
 2.Academic coursework in networking, operating systems, or system programming.
 3.Troubleshooting tool in small networks or embedded devices.
