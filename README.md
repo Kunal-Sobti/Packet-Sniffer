@@ -57,12 +57,12 @@ explore how these packets can be captured and interpreted manually at the byte l
 5.Intrusion Detection
 
 ## METHODOLOGY :
-1. Packet Capture- 
+### 1. Packet Capture- 
 A raw socket is initialized using: 
 This listens on all interfaces and captures every packet  
 (ethertype 0x0003 = all protocols).
 
-2. Ethernet Frame Parsing 
+### 2. Ethernet Frame Parsing 
 First, the 14-byte Ethernet frame is extracted and parsed: 
 • Destination MAC 
 • Source MAC 
@@ -73,7 +73,7 @@ split these components.
 ![image](https://github.com/user-attachments/assets/960ab7eb-b1d8-45e9-83ec-13952f9573c8)
 Figure 3.1: Ethernet Header 
 
-3. IPv4 Packet Parsing 
+### 3. IPv4 Packet Parsing 
 If the Ethernet protocol is 0x0800, it signifies an IPv4 packet. Key fields include: 
 • Version and header length 
 • TTL 
@@ -84,7 +84,7 @@ The program checks the protocol field to determine further parsing logic.
 ![image](https://github.com/user-attachments/assets/7244834d-18d0-4048-9bfe-e9b998434e8f) 
 Figure 3.2: IPv4 Header 
 
-4. Transport Layer Analysis 
+### 4. Transport Layer Analysis 
 Based on the protocol field in the IP header: 
 • ICMP: The first 4 bytes are unpacked to get Type, Code, and Checksum. 
 • TCP: Parses ports, sequence number, acknowledgment, and flag bits (URG, 
@@ -92,7 +92,7 @@ ACK, PSH, RST, SYN, FIN).
 • UDP: Extracts source/destination ports and length. 
 Each layer is parsed manually using struct.unpack() and logical bitwise operations. 
  
-5. Output Formatting 
+### 5. Output Formatting 
 The extracted data is printed with tabbed indentation for clarity. Multiline payloads are 
 formatted using textwrap and a custom utility function to make hex data readable. 
 This hierarchical and readable output helps in understanding the structure of each 
@@ -101,7 +101,6 @@ packet and is useful for debugging or training purposes.
 ## OUTPUT WINDOW:
 ![image](https://github.com/user-attachments/assets/ae14022a-fed5-4e5f-95ab-caf8b7e42624)
 ![image](https://github.com/user-attachments/assets/98ec2111-dcf7-488f-891e-dde098703817)
-![image](https://github.com/user-attachments/assets/458003f3-e28d-4321-aa95-4e22ee43ea65)
 
 ## Future Extensions:-
 The current implementation is robust for learning and analysis, but it can be extended into a more powerful tool through:
